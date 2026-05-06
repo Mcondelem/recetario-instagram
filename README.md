@@ -12,6 +12,7 @@ Esta primera version es un prototipo local con datos mock. Incluye:
 - revision antes de guardar,
 - detalle de receta,
 - filtros por busqueda, tiempo, favoritas y pendientes.
+- preparacion de Supabase con schema SQL, RLS y clientes SSR/browser.
 
 ## Stack
 
@@ -19,6 +20,8 @@ Esta primera version es un prototipo local con datos mock. Incluye:
 - React
 - TypeScript
 - Tailwind CSS
+- Supabase
+- Zod
 
 ## Desarrollo local
 
@@ -43,10 +46,23 @@ npm run lint
 npm run build
 ```
 
+## Configuracion de Supabase
+
+Copia `.env.example` a `.env.local` y rellena:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=...
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=...
+```
+
+Despues ejecuta el SQL de `supabase/migrations/0001_initial_schema.sql` en el SQL editor de Supabase.
+
+La guia formativa de este paso esta en `docs/formacion/02-supabase.md`.
+
 ## Proximos pasos
 
-1. Conectar Supabase para autenticacion y base de datos.
-2. Crear tablas para usuarios, recetas, ingredientes, pasos y etiquetas.
-3. Anadir un endpoint de extraccion con OpenAI.
-4. Validar la respuesta de IA con Zod antes de guardar.
-5. Sustituir los datos mock por datos privados por usuario.
+1. Crear el proyecto real en Supabase.
+2. Ejecutar el schema SQL.
+3. Crear pantallas de registro, login y logout.
+4. Sustituir los datos mock por recetas privadas por usuario.
+5. Anadir un endpoint de extraccion con OpenAI.
