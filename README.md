@@ -13,6 +13,7 @@ Esta primera version es un prototipo local con datos mock. Incluye:
 - detalle de receta,
 - filtros por busqueda, tiempo, favoritas y pendientes.
 - preparacion de Supabase con schema SQL, RLS y clientes SSR/browser.
+- autenticacion real con registro, login y logout.
 
 ## Stack
 
@@ -55,14 +56,19 @@ NEXT_PUBLIC_SUPABASE_URL=...
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=...
 ```
 
-Despues ejecuta el SQL de `supabase/migrations/0001_initial_schema.sql` en el SQL editor de Supabase.
+Despues ejecuta el SQL de estas migraciones en el SQL editor de Supabase:
 
-La guia formativa de este paso esta en `docs/formacion/02-supabase.md`.
+1. `supabase/migrations/0001_initial_schema.sql`
+2. `supabase/migrations/0002_profile_signup_trigger.sql`
+
+Las guias formativas estan en:
+
+- `docs/formacion/02-supabase.md`
+- `docs/formacion/03-auth.md`
 
 ## Proximos pasos
 
-1. Crear el proyecto real en Supabase.
-2. Ejecutar el schema SQL.
-3. Crear pantallas de registro, login y logout.
-4. Sustituir los datos mock por recetas privadas por usuario.
-5. Anadir un endpoint de extraccion con OpenAI.
+1. Probar registro, confirmacion de email si aplica, login y logout.
+2. Sustituir los datos mock por recetas privadas por usuario.
+3. Crear formularios reales de alta y edicion de recetas.
+4. Anadir un endpoint de extraccion con OpenAI.

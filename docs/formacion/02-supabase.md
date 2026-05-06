@@ -14,6 +14,7 @@ En el prototipo inicial las recetas viven en memoria dentro de React. Eso nos si
 
 - `.env.example`: plantilla de variables de entorno.
 - `supabase/migrations/0001_initial_schema.sql`: tablas, indices y politicas RLS.
+- `supabase/migrations/0002_profile_signup_trigger.sql`: perfil automatico al registrar usuario.
 - `src/lib/supabase/client.ts`: cliente para componentes de navegador.
 - `src/lib/supabase/server.ts`: cliente para servidor, server actions y route handlers.
 - `src/lib/supabase/proxy.ts` y `src/proxy.ts`: refresco de sesion con cookies.
@@ -26,6 +27,7 @@ En el prototipo inicial las recetas viven en memoria dentro de React. Eso nos si
 3. Copiar `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` o la anon key.
 4. Crear `.env.local` a partir de `.env.example`.
 5. Ejecutar el SQL de `supabase/migrations/0001_initial_schema.sql` en el SQL editor.
+6. Ejecutar el SQL de `supabase/migrations/0002_profile_signup_trigger.sql` en el SQL editor.
 
 ## Idea importante
 
