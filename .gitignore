@@ -20,6 +20,10 @@
 # production
 /build
 
+# java
+target/
+apps/api/target/
+
 # misc
 .DS_Store
 *.pem

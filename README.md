@@ -23,6 +23,8 @@ Esta primera version es un prototipo local con datos mock. Incluye:
 - Tailwind CSS
 - Supabase
 - Zod
+- Java 21
+- Spring Boot
 
 ## Desarrollo local
 
@@ -39,6 +41,20 @@ npm run dev
 ```
 
 Abre [http://localhost:3000](http://localhost:3000).
+
+## Backend Java
+
+Desde `apps/api`:
+
+```bash
+mvn spring-boot:run
+```
+
+Endpoint inicial:
+
+```text
+GET http://localhost:8080/health
+```
 
 ## Comandos utiles
 
@@ -65,10 +81,12 @@ Las guias formativas estan en:
 
 - `docs/formacion/02-supabase.md`
 - `docs/formacion/03-auth.md`
+- `docs/formacion/04-java-backend.md`
 
 ## Proximos pasos
 
 1. Probar registro, confirmacion de email si aplica, login y logout.
-2. Sustituir los datos mock por recetas privadas por usuario.
-3. Crear formularios reales de alta y edicion de recetas.
-4. Anadir un endpoint de extraccion con OpenAI.
+2. Validar tokens JWT de Supabase desde Spring Boot.
+3. Sustituir los datos mock por recetas privadas por usuario.
+4. Crear formularios reales de alta y edicion de recetas.
+5. Anadir un endpoint de extraccion con OpenAI.
